@@ -1,0 +1,10 @@
+<nav>
+  <ul>
+    <li>Home</li>
+    <% if is_logged_in? %>
+      <% get_session_user.roles.each do |role| %>
+        <li><%= role.title %></li>
+      <% end %>
+    <% end %>
+  </ul>
+</nav>

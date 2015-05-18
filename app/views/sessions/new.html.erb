@@ -1,0 +1,14 @@
+<div class="flash"><%= flash[:login_failed] %></div>
+<%= form_tag('/sessions', method: :post) do %>
+  <div class="field">
+    <%= label_tag :identification_number %><br>
+    <%= text_field_tag :identification_number %>
+  </div>
+  <div class="field">
+    <%= label_tag :password %><br>
+    <%= password_field_tag :password %>
+  </div>
+  <div class="actions">
+    <%= submit_tag %>
+  </div>
+<% end %>
